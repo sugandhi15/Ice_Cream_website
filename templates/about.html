@@ -1,5 +1,49 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block linking %}<link rel="stylesheet" href="{% static 'aboutpage.css' %}"> {% endblock linking %}
 
 {% block title %}About{% endblock title %}
 
-{% block body %}This is the about page{% endblock body %}
+{% block body %}
+<header>
+    <h1>About Us</h1>
+    <p>Welcome to Ice Cream Delight – where every scoop is a celebration!</p>
+</header>
+
+<section id="brand-story">
+    <h2>Our Story</h2>
+    <p>Founded in 2020, Ice Cream Delight began with a passion for creating the finest ice cream. Our founder, Jane Doe, envisioned a place where flavor and quality meet, using only the freshest ingredients. Today, we are proud to serve a variety of flavors that bring joy to our community.</p>
+</section>
+
+<section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-member">
+        <img src="images/jane.jpg" alt="Jane Doe" class="team-photo">
+        <h3>Jane Doe</h3>
+        <p>Founder & CEO</p>
+        <p>Passionate about ice cream, Jane leads our team with creativity and dedication.</p>
+    </div>
+    <div class="team-member">
+        <img src="images/john.jpg" alt="John Smith" class="team-photo">
+        <h3>John Smith</h3>
+        <p>Head Chef</p>
+        <p>John crafts our unique flavors and ensures every scoop is perfect!</p>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2>Our Achievements</h2>
+    <p>We’ve been awarded the “Best Ice Cream Shop” in the city for two consecutive years! Thank you for your support!</p>
+</section>
+
+<section id="contact">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions or want to learn more about our ice cream, feel free to <a href="contact.html">contact us</a>!</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ice Cream Delight. All rights reserved.</p>
+</footer>
+
+{% endblock body %}
