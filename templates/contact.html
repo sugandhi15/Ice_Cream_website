@@ -6,27 +6,34 @@
 
 <div class="container">
     {% comment %} <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./static/images/img4.avif" ></img> {% endcomment %}
-    <img src="./static/images/img01.avif" class="img-fluid" alt="contactUs" style="margin-left: 14vw" >
+    <img src="./static/images/img01.avif" class="img-fluid" alt="contactUs" style="margin-left: 26vw ; height:60vh" >
     {% comment %} <img src="img4.avif" alter="contactUs"> {% endcomment %}
     <h2 align="center" > Contact Us </h2>
     <br><br>
     <div class="container">
-        <form>
+        <form method="post" action="/contact" >
+            {% csrf_token %}
             <div class="mb-3">
               {% comment %} <label for="name" class="form-label">Name</label> {% endcomment %}
-              <input type="text" class="form-control" id="name" style="height:50px" aria-describedby="emailHelp" placeholder="Name">
+              <input type="text" class="form-control" id="name" style="height:50px" name="name" aria-describedby="emailHelp" placeholder="Name">
               {% comment %} <div id="emailHelp" class="form-text">Enter your name</div> {% endcomment %}
             </div>
             <br>
             <div class="mb-3">
               {% comment %} <label for="exampleInputEmail1" class="form-label">Email address</label> {% endcomment %}
-              <input type="email" class="form-control" id="exampleInputEmail1" style="height:50px" aria-describedby="emailHelp" placeholder="Email">
+              <input type="email" class="form-control" id="exampleInputEmail1" style="height:50px" name="email" aria-describedby="emailHelp" placeholder="Email">
+              {% comment %} <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> {% endcomment %}
+            </div>
+            <br>
+            <div class="mb-3">
+              {% comment %} <label for="exampleInputEmail1" class="form-label">Email address</label> {% endcomment %}
+              <input type="phone" class="form-control" id="exampleInputEmail1" style="height:50px" name="phone" aria-describedby="emailHelp" placeholder="Phone Number">
               {% comment %} <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> {% endcomment %}
             </div>
             <br>
             <div class="mb-3">
               {% comment %} <label for="desc" class="form-label">Reason for contacting</label> {% endcomment %}
-              <input type="text" class="form-control" id="desc" style="height:50px" placeholder="Reason for contacting" >
+              <input type="text" class="form-control" id="desc" style="height:50px" name="desc" placeholder="Reason for contacting" >
               {% comment %} <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> {% endcomment %}
             </div>
             <br><br>
